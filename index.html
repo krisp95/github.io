@@ -3,7 +3,8 @@
 <head>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <img class = "smaller-image" src="kristina.jpg">
 <style>
 body {
     font-family: "Lato", sans-serif;
@@ -48,32 +49,125 @@ body {
   .sidenav a {font-size: 18px;}
 }
 
+.smaller-image {
+    width: 60px;
+    border-color: black;
+    border-width: 4px;
+    border-style: none;
+    border-radius: 50%;
+  }
+.home
+{
+  font-size: 70px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-align: center;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    background: #3B5998;
+    color: white;
+}
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Make sure that padding behaves as expected */
+* {box-sizing:border-box}
+
+/* Container for skill bars */
+.container {
+    width: 100%; /* Full width */
+    background-color: #ddd; /* Grey background */
+}
+
+.skills {
+    text-align: right; /* Right-align text */
+    padding-right: 20px; /* Add some right padding */
+    line-height: 40px; /* Set the line-height to center the text inside the skill bar, and to expand the height of the container */
+    color: white; /* White text color */
+}
+
+.html {width: 70%; background-color: #4CAF50;} /* Green */
+.css {width: 40%; background-color: #2196F3;} /* Blue */
+.cpp {width: 40%; background-color: #f44336;} /* Red */
+.java {width: 60%; background-color: #808080;} /* Dark Grey */
 </style>
 </head>
 <body background = "site-background.jpg">
 
-<div id="mySidenav" class="sidenav">
+  <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
   <a href="#">Home</a>
   <a href="#">About</a>
   <a href="#">Skills</a>
   <a href="#">Contact</a>
 </div>
 
+
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 
+<div id="main">
+  <div>
 
+    <p class = "home">Welcome to my website</p>
+  </div>
+  <div>
+    <p class = "home">Skills</p>
+    <p>HTML</p>
+<div class="container">
+  <div class="skills html">70%</div>
+</div>
 
+<p>CSS</p>
+<div class="container">
+  <div class="skills css">40%</div>
+</div>
+
+<p>C++</p>
+<div class="container">
+  <div class="skills cpp">40%</div>
+</div>
+
+<p>Java</p>
+<div class="container">
+  <div class="skills java">60%</div>
+</div>
+  </div>
+  <div>  
+    <p class = "home">Contact me on:</p>
+   <div class = "wrapper">
+    <a href="https://www.facebook.com/profile.php?id=100011553041148" class="fa fa-facebook"></a>
+    <a href="#" class = "fa fa-google"></a>
+    <a href="https://www.instagram.com/kristina_papic/" class="fa fa-instagram"></a></div>
+  </div>
+</div>
 
 <script>
-
+/*Pokusacu da promjenim ovo da gurne sav tekst u desno.*/
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
 }
-
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
+
 
 </script>
      
