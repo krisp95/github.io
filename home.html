@@ -1,98 +1,142 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<script>
+
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+
+</script>
+
 <style>
-body, html {
+
+body, html, .main {
     height: 100%;
 }
 
-.parallax {
-    /* The image used */
-    background-image: url('parallax-img-1.jpg');opacity:0.8;
-
-    /* Full height */
-    height: 100%; 
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+section {
+    min-height: 100%;
 }
-div.first {
-    opacity: 0.1;
-    filter: alpha(opacity=10); /* For IE8 and earlier */
-    font-size: 20px;
+body {
+    font-family: "Lato", sans-serif;
+}
 
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 300px;
+}
+
+.sidenav a {
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
 .container {
-    width: 100%; /* Full width */
-    background-color: #ddd; /* Grey background */
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+* {box-sizing: border-box}
+
+.container {
+  width: 100%;
+  background-color: #ddd;
 }
 
 .skills {
-    text-align: right; /* Right-align text */
-    padding-right: 20px; /* Add some right padding */
-    line-height: 40px; /* Set the line-height to center the text inside the skill bar, and to expand the height of the container */
-    color: white; /* White text color */
-}
-.html {width: 70%; background-color: #4CAF50;} /* Green */
-.css {width: 40%; background-color: #2196F3;} /* Blue */
-.cpp {width: 40%; background-color: #f44336;} /* Red */
-.java {width: 60%; background-color: #808080;} /* Dark Grey */
-
-.fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 30px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 50%;
-    background: #3B5998;
-    color: white;
-}
-.fa-google {
-  background: #dd4b39;
+  text-align: right;
+  padding-right: 20px;
+  line-height: 40px;
   color: white;
 }
 
-.fa-instagram {
-  background: #125688;
-  color: white;
-}
-.wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+.html {width: 40%; background-color: #4CAF50;}
+.css {width: 40%; background-color: #2196F3;}
+.java {width: 50%; background-color: #f44336;}
+.cpp {width: 40%; background-color: #808080;}
 
-.contact{
-  font-size: 30px;
-  font-family: "Comic Sans MS", cursive, sans-serif;
-  text-align: center;
-}
+
 
 </style>
 </head>
+
 <body>
 
-<div class="parallax"></div>
+<nav class="w3-bar w3-black">
+  <a href="#section4" class="w3-button w3-bar-item">Home</a>
+  <a href="#section1" class="w3-button w3-bar-item">About</a>
+  <a href="#section2" class="w3-button w3-bar-item">Skills</a>
+  <a href="#section3" class="w3-button w3-bar-item">Contact</a>
+</nav>
 
-<div style = "height:250px;text-align:center">
-  <p style = "font-size:25px;font-family:Arial;word-spacing:5px">About me</p>
-  <p style = "font-size:22px;font-family:Arial;opacity:0.6">Hi, everyone! My name is Kristina. I am student. I am 22 years old.
-    I love nautre, freedom and animals. My favorite animal is dog. I am from Niksic, Montengro. Let's scroll down and meet me.</p>
+<div id = "section4">
+<section><img  src="spiral.jpeg" style="width:100%;height:50%"></section>
 </div>
 
-<div class="parallax"></div>
+<div id = "section1" style = "height: 30%">
+<section class="w3-container w3-center w3-content" style="max-width:600px">
+  <h2 class="w3-wide">ABOUT ME</h2>
+  <p class="w3-opacity"><i>Hi, everyone</i></p>
+  <p class="w3-justify">My name is Kristina. I'm from Niksic and I'm 22 years old. I love nature, animals and music. I'm a student of computer science.</p>
+</section>
+</div>
 
-<div style = "height:500px">
-    <p style = "font-size:25px;font-family:Arial;word-spacing:5px;text-align:center">Skills</p>
-    <p>HTML</p>
+<div style = "height:80%" id="section2">
+<section class = "w3-container w3-center" style="max-width:100%">
+<h2 class = "w3-wide">SKILLS</h2>
+<p>HTML</p>
 <div class="container">
-  <div class="skills html">70%</div>
+  <div class="skills html">40%</div>
 </div>
 
 <p>CSS</p>
@@ -100,29 +144,24 @@ div.first {
   <div class="skills css">40%</div>
 </div>
 
+<p>Java</p>
+<div class="container">
+  <div class="skills java">50%</div>
+</div>
+
 <p>C++</p>
 <div class="container">
   <div class="skills cpp">40%</div>
 </div>
 
-<p>Java</p>
-<div class="container">
-  <div class="skills java">60%</div>
-</div>
-  </div>
 </div>
 
-<div class="parallax"></div>
-
-<footer>
-<div>  
-    <p class = "contact">Contact me</p>
-   <div class = "wrapper">
-    <a href="https://www.facebook.com/profile.php?id=100011553041148" class="fa fa-facebook"></a>
-    <a href="#" class = "fa fa-google"></a>
-    <a href="https://www.instagram.com/kristina_papic/" class="fa fa-instagram"></a></div>
-  </div>
+<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge" id="section3">
+<h1>Contact me</h1>
+  <a href="#"><i class="fa fa-facebook-official"></i></a>
+  <a href = "#"><i class = "fa fa-github"></i><a>
+    <a href = "#"><i class = "fa fa-instagram"></i><a>
 </footer>
 
 </body>
-</html>
+</html> 
